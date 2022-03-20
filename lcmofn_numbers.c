@@ -1,0 +1,31 @@
+#include<stdio.h>
+void main()
+{
+	int x[40],n,i,max=0,j,found=0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&x[i]);
+		if(max<x[i])
+		{
+			max=x[i];
+		}
+	}
+	for(i=max;;i=i+max)
+	{
+		found=0;
+	}
+	for(j=0;j<n;j++)
+	{
+		if(i%x[j]!=0)
+		{
+			found=1;
+			break;
+		}
+	}
+	if(found==0)
+	{
+		printf("%d",i);
+		break;
+	}
+}
